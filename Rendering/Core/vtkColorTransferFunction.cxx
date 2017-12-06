@@ -831,7 +831,7 @@ void vtkColorTransferFunction::GetTable( double xStart, double xEnd,
 
     // Do we need to move to the next node?
     while ( idx < numNodes &&
-            x > this->Internal->Nodes[idx]->X )
+            x >= this->Internal->Nodes[idx]->X )
     {
       idx++;
       // If we are at a valid point index, fill in
